@@ -22,10 +22,16 @@ module.exports = {
       bodyObj = JSON.parse(event.body)
     }
     catch (jsonerror) {
-        console.log('Hey there was an error: ', jsonerror)
+        console.log('Event message sent to lambda was unacceptable, might not have been http event ', jsonerror)
         return {
           statusCode: 400
         }
+    }
+
+    if (typeof bodyObj.name == 'undefined') {
+      console.log('The name of the transmisson was not supplied to the lambda.')
+      return {
+        statusCode: 400
     }
   }
 };
