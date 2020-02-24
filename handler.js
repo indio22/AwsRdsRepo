@@ -40,6 +40,7 @@ module.exports = {
 
     // Create the parameter object that gets sent to the DB.
     // And these params such as TableName and Item are required by the aws-sdk.
+    // This is the syntax required by the 
     let putParams = {
       TableName: process.env.DB_TRANSMISSION_TABLE,
       Items: {
@@ -59,7 +60,7 @@ module.exports = {
     // In case there was an error executing the put.
     catch(putError) {
       console.log('There was an error putting the transmission data to the DB.');
-      console.log('Here are the parameters that were sent to the DB: ', putparams);
+      console.log('Here are the parameters that were sent to the DB: ', putParams);
       return {
         statusCode: 500
       }

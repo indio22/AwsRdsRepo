@@ -45,8 +45,8 @@ provider:
 #            - "/*"
 
 # you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+environment:
+  DB_TRANSMISSION_TABLE: TBD-TransmissionTable
 
 # you can add packaging information here
 #package:
