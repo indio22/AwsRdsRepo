@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Using this to track code for query to AWS RDS postgresql DB\r Added this line using VS Code.",
+  "main": "handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.623.0"
+  },
+  "devDependencies": {
+    "serverless-pseudo-parameters": "^2.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indio22/AwsRdsRepo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indio22/AwsRdsRepo/issues"
+  },
+  "homepage": "https://github.com/indio22/AwsRdsRepo#readme"
+}
