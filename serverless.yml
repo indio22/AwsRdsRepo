@@ -111,7 +111,7 @@ functions:
 resources:
   Resources:
     transmission:
-      Type: 'AWS::Dynamo::Table'
+      Type: 'AWS::DynamoDB::Table'
       Properties:
         TableName: transmissionTableSls
         AttributeDefinitions:
