@@ -46,7 +46,7 @@ provider:
 
 # you can define service wide environment variables here
 environment:
-  DB_TRANSMISSION_TABLE: TBD-TransmissionTable
+  DB_TRANSMISSION_TABLE: transmissionTableSls
 
 # you can add packaging information here
 #package:
@@ -62,8 +62,8 @@ functions:
     handler: handler.create
     events:
       - http:
-          path: /what
-          method: get
+          path: /transmission
+          method: post
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -106,6 +106,22 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
+
+# TRC - Can add info here to have AWS automaticaly create a table during the serverless deploy.
+resources:
+  Resources:
+    transmission:
+      Type: 'AWS::Dynamo::Table'
+      Properties:
+        TableName: transmissionTableSls
+        AttributeDefinitions:
+          - AttributeName: name
+            AttributeType: S
+        KeySchema:
+          - AttributeName: name
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+
 #resources:
 #  Resources:
 #    NewResource:
