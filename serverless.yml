@@ -38,7 +38,7 @@ provider:
         - dynamodb.GetItem
         - dynamodb.UpdateItem
         - dynamodb.DeleteItem
-      Resource: arn:aws:dynamodb:us-east-1:571431878800:table/transmissionTableSls
+      Resource: arn:aws:dynamodb:us-east-1:571431878800:table/transmissionTableSlsAlt
 
 # arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:transmissionTableSls
 
