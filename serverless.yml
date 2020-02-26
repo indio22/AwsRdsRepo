@@ -30,7 +30,7 @@ provider:
 
 # you can add statements to the Lambda function's IAM Role here
 # TRC Note: The Resource line makes use of a plugin I got from the tutorial.
-iamRoleStatements:
+  iamRoleStatements:
     - Effect: "Allow"
       Action:
         - dynamodb.PutItem
@@ -59,8 +59,8 @@ iamRoleStatements:
 #            - "/*"
 
 # you can define service wide environment variables here
-environment:
-  DB_TRANSMISSION_TABLE: transmissionTableSlsAlt
+  environment:
+    DB_TRANSMISSION_TABLE: transmissionTableSlsAlt
 
 # you can add packaging information here
 #package:
