@@ -60,7 +60,7 @@ iamRoleStatements:
 
 # you can define service wide environment variables here
 environment:
-  DB_TRANSMISSION_TABLE: transmissionTableSls
+  DB_TRANSMISSION_TABLE: transmissionTableSlsAlt
 
 # you can add packaging information here
 #package:
@@ -131,7 +131,7 @@ resources:
     transmission:
       Type: 'AWS::DynamoDB::Table'
       Properties:
-        TableName: transmissionTableSls
+        TableName: transmissionTableSlsAlt
         AttributeDefinitions:
           - AttributeName: name
             AttributeType: S
