@@ -38,7 +38,10 @@ iamRoleStatements:
         - dynamodb.GetItem
         - dynamodb.UpdateItem
         - dynamodb.DeleteItem
-      Resource: arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:transmissionTableSls
+      Resource: arn:aws:dynamodb:us-east-1:571431878800:table/transmissionTableSls
+
+# arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:transmissionTableSls
+
 
 #  iamRoleStatements:
 #    - Effect: "Allow"
