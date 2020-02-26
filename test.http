@@ -1,5 +1,7 @@
 ###
-POST https://vk1nvolbo6.execute-api.us-east-1.amazonaws.com/dev/transmission
+POST https://vk1nvolbo6.execute-api.us-east-1.amazonaws.com/dev/transmission HTTP/1.1
+content-type: application/json
+
 {
     "name":"T18"
 }
