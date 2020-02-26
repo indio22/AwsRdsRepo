@@ -68,6 +68,10 @@ environment:
 #    - exclude-me.js
 #    - exclude-me-dir/**
 
+# TRC Note: I added this section to activate the pseudo plugin
+plugins:
+  - serverless-pseudo-parameters
+
 functions:
   create:
     handler: handler.create
