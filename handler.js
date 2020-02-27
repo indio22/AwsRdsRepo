@@ -44,9 +44,7 @@ module.exports = {
     let putParams = {
       TableName: process.env.DB_TRANSMISSION_TABLE,
       Items: {
-        name: bodyObj.name,
-        make: bodyObj.make,
-        type: bodyObj.type
+        name: bodyObj.name
       }
     }
 
