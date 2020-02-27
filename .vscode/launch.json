@@ -5,13 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Program",
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "program": "${workspaceFolder}\\handler.js",
+            "stopOnEntry": false,
+            "args": ["offline", "--port=8104", "-s", "dev","--authorizer="],
             "skipFiles": [
                 "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\handler.js"
+            ]
+            
         }
     ]
 }
