@@ -18,6 +18,7 @@ const AWS = require('aws-sdk');
 module.exports = {
   create: async(event, context) => {
     // This will hold the body of the event.
+    console.log('Entering the create function.')
     let bodyObj = {};
     try {
       bodyObj = JSON.parse(event.body)
