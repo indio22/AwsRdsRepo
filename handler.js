@@ -44,7 +44,7 @@ module.exports = {
     // This is the syntax required by the 
     let putParams = {
       TableName: process.env.DB_TRANSMISSION_TABLE,
-      Items: {
+      Item: {
         name: bodyObj.name
       }
     }
