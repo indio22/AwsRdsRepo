@@ -74,6 +74,11 @@ provider:
 # TRC Note: I added this section to activate the pseudo plugin
 plugins:
   - serverless-pseudo-parameters
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: arn:aws:s3:::finch-bucket
 
 functions:
   create:
