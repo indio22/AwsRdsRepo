@@ -102,7 +102,7 @@ module.exports = {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(scanResult.Items.map(transmission ==> {
+      body: JSON.stringify(scanResult.Items.map(transmission => {
         return {
           name: transmission.name,
           make: transmission.make
