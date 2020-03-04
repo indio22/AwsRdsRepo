@@ -9,9 +9,9 @@
 
     </div>
 
-    <h1>New entry</h1>
+    <h1>Enter new transmission name:</h1>
     <form>
-        <label for="msg">Message</label>
+        <label for="msg">Enter new transmission name here:</label>
         <textarea id="msg"></textarea>
 
         <button id='submitButton'>Submit</button>
@@ -34,8 +34,8 @@
                     $('#entries').html('');
 
                     //Loops through the returned data items, displays in the "entries" division.
-                    data.Items.forEach(function (guestbookItem) {
-                        $('#entries').append('<p>' + guestbookItem.message + '</p>');
+                    data.Items.forEach(function (transmissionItem) {
+                        $('#entries').append('<p>' + transmissionItem.message + '</p>');
                     })
                 }
             });
