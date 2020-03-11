@@ -18,7 +18,7 @@ const AWS = require('aws-sdk');
 module.exports = {
   create: async (event, context) => {
     // This will hold the body of the event.
-    console.log('Entering the create function.')
+    console.log('Entering the create function, to add a new transmission to the DB.')
     let bodyObj = {};
     try {
       bodyObj = JSON.parse(event.body)
@@ -50,6 +50,7 @@ module.exports = {
         type: bodyObj.type
       }
     }
+    console.log('Here is the putParams, that will be posted to save new transmission to DB: ', putParams)
 
     // This is where we create the new DB connection object, and execute the put
     // to write the record (using data from the event body params, to the database.)
@@ -82,6 +83,7 @@ module.exports = {
     let scanResult = {}
     try {
       let rdsdb = new AWS.DynamoDB.DocumentClient();
+      console.log('About to run the scan of dynamo transmissionTableSlsAlt table');
       scanResult = await rdsdb.scan(scanParams).promise();
     }
     catch (scanError) {
@@ -100,6 +102,7 @@ module.exports = {
       }
     }
 
+    console.log('This means handler function for list got to the point just before it will stringify returned data.');
     return {
       statusCode: 200,
       body: JSON.stringify(scanResult.Items.map(transmission => {
