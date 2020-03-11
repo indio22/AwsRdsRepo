@@ -94,6 +94,8 @@ module.exports = {
       }
     }
 
+    console.log('About to check if scanresult is either: null, not an array, has length of 0.  In that case will return 404.');
+    console.log('Here is the contents of the scanResult: ', scanResult);
     if ((scanResult.Items == null) ||
       !Array.isArray(scanResult) ||
       scanResult.Items.length == 0) {
