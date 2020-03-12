@@ -6,7 +6,7 @@
 <body>
     <h1>Transmission Interface</h1>
     <div id="entries">
-
+        <h2>Temp entry in the entries div.</h2>
     </div>
 
     <h1>Enter new transmission name:</h1>
@@ -29,7 +29,7 @@
                 url: API_URL,
 
                 //Looks like if the post was success, the data returned is passed into this function.
-                success: function (data) {
+                success: function(data) {
                     //This clears out the entries div further up.
                     $('#entries').html('');
 
